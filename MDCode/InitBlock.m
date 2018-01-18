@@ -15,7 +15,7 @@ PhiCutoff = 3 * AtomSpacing * 1.1;
 
 T = 30;
 
-AddRectAtomicArray(10, 10, 0, 0, 0, 0, 0, T, 0);
+AddCardioAtomicArray(10, 10, 0, 0, 0, 0, 0, T, 0);
 
 Size = 8 * AtomSpacing;
 Limits = [-Size +Size -Size +Size]; % square is good
