@@ -39,7 +39,7 @@ PlotCount = 0;
 doPlotImage = 0; % set to 1 to draw the image
 
 % Simulation = 'PNJctEqBias';
-Simulation = 'MyGaussianTwoCarRC';
+Simulation = 'GaussianTwoCarRC';
 % Simulation = 'GaussianTwoCarRCLinGrad';
 
 if strcmp(Simulation,'GaussianTwoCar')
@@ -60,9 +60,7 @@ elseif strcmp(Simulation,'PNJctEq')
     eval('SetPNJctParasEqBC');
 elseif strcmp(Simulation,'PNJctEqBias')
     eval('SetPNJctParasEqBCBias');
-elseif strcmp(Simulation,'MyGaussianTwoCarRC')
-    disp("MY STUFF");
-    eval('MySetGaussian2CarParasRCOnly');
+
 end
 
 FormGv(nx,LVbc,RVbc); % Poisson equation set Gv and Bv

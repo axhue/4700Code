@@ -1,6 +1,6 @@
 Coupled = 1;
 TwoCarriers = 1;
-RC = 1;
+RC = 0;
 
 nx = 201;
 l = 1e-6;
@@ -10,8 +10,8 @@ dx = x(2)-x(1);
 xm = x(1:nx-1) + 0.5*dx;
 
 % Nd = 1e16 * 1e6; % Const. 1/cm3 (100 cm/m)^3
-Nd = linspace(1e16,20e,16,100);
-
+% Nd = linspace(1e16,20e16,nx);
+Nd = 20E16*exp(-x/3.3381e-07);
 NetDoping = ones(1,nx).*Nd; % doping
 
 x0 = l/2;

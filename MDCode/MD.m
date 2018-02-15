@@ -43,10 +43,10 @@ PlotPosOnly = 1;
 % Simulation initiallization
 %InitThree
 % InitBlock
- InitCirc
+% InitCirc
 % InitBlock0
 % InitBlock0FD
-% InitVStream
+ InitVStream
 % InitHCP
 % InitHCPBlob
 % InitVStreamHCP
@@ -114,12 +114,11 @@ ypp = y - 2 * dt * Vy;
 Plt0 = PlDelt;
 
 while t < TStop
-
     %     F = ma
     %     F = m dv/dt
 
     GetForces(PhiCutoff,LJEpsilon,LJSigma);
-
+    
     % Forward difference
     if Method == 'FD'
         %     dv = F/m dt
